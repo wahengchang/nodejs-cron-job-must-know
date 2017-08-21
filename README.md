@@ -9,7 +9,7 @@ it is an example of running Node.js script with every certain period(cron and no
     #!/usr/bin/env sh 
     node /home/campaigns/reporting/UNIT_TESTS/testCron.js > /home/campaigns/reporting/UNIT_TESTS/cron.log
     ```
-- The problem of two above method is messing up the path, all the command is in `absolut path`, but the script is in `relative path`. It causes the error of file not found.
+- The problem of two above method is messing up the path, all the command is in `absolut path`, but the Node.js script uses `relative path` to import/require other modules. It causes the error of file not found. __*So we need to execute the cron under the directory of Node.js script, which contains all the module which will be used*__.
 
 
 
