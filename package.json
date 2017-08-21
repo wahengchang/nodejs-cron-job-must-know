@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-cron-job-must-know",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script": "node scriptParam.js --"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahengchang/nodejs-cron-job-must-know.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahengchang/nodejs-cron-job-must-know/issues"
+  },
+  "homepage": "https://github.com/wahengchang/nodejs-cron-job-must-know#readme",
+  "dependencies": {
+    "node-cron": "^1.2.1"
+  }
+}
