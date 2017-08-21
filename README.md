@@ -25,7 +25,7 @@ Import node-cron and schedule a task:
 
 [Read more](https://www.npmjs.com/package/node-cron)
 
-```
+```js
 var cron = require('node-cron');
  
 cron.schedule('* * * * *', function(){
@@ -72,6 +72,8 @@ cron.schedule('*/1 * * * *', function(){
     });
 });
 ```
+
+
 
 
 
