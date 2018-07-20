@@ -1,6 +1,6 @@
 var cron = require('node-cron');
 
-//exceute every 1 min
+//execute every 1 min
 cron.schedule('*/1 * * * *', function(){
     var shell = require('./child_helper');
 
@@ -10,7 +10,7 @@ cron.schedule('*/1 * * * *', function(){
     ]
 
     shell.series(commandList , function(err){
-    //    console.log('executed many commands in a row'); 
+    //    console.log('execute many commands in a row'); 
         console.log('done')
     });
 });
