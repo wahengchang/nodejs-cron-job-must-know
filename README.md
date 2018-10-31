@@ -9,12 +9,12 @@ it is an example of running Node.js script with every certain period(cron and no
     #!/usr/bin/env sh 
     node /home/campaigns/reporting/UNIT_TESTS/testCron.js > /home/campaigns/reporting/UNIT_TESTS/cron.log
     ```
-- The problem of two above method is messing up the path, all the command is in `absolut path`, but the Node.js script uses `relative path` to import/require other modules. It causes the error of file not found. __*So we need to execute the cron under the directory of Node.js script, which contains all the module which will be used*__.
+- The problem with the two above methods is messing up the path. The command is in `absolute path`, but the Node.js script uses `relative path` to import/require other modules. It causes the error of file not found. __*So we need to execute the cron under the directory of Node.js script, which contains all the modules which will be used*__.
 
 
 
 ## Install 
-This is the lib is used to keep the cron-job alive, which triggers the node script at certain time.
+This lib is used to keep the cron-job alive, which triggers the node script at a certain time.
 
 ```
 $ npm install --save node-cron
@@ -38,7 +38,7 @@ cron.schedule('* * * * *', function(){
 
  - To run script : `$ node script1.js` 
  - And script: `$ npm run script -- PeterGood`
- - `child_help.js` is a amazing Node.js script from [mout](https://github.com/mout/mout/), which helps to manage multiple linux command. 
+ - `child_help.js` is an amazing Node.js script from [mout](https://github.com/mout/mout/), which helps to manage multiple linux commands. 
 
 
 Start a Daemon, and run 
@@ -46,18 +46,18 @@ Start a Daemon, and run
 $ node cronNodeScript
 ```
 
-Exceute scritp every 1 min
+Execute script every 1 min
 ```js
-//exceute every 1 min
+//execute every 1 min
 cron.schedule('*/1 * * * *', function(){
     ....
 });
 ```
 
-Exceute `$ node script1.js` and `npm run script -- PeterGood` every 1 min
+Execute `$ node script1.js` and `npm run script -- PeterGood` every 1 min
 ```js
 
-//exceute every 1 min
+//execute every 1 min
 cron.schedule('*/1 * * * *', function(){
     var shell = require('./child_helper');
 
